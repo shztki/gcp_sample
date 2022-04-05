@@ -27,7 +27,7 @@ variable "instance_example" {
   default = {
     name         = "example"
     machine_type = "e2-micro"
-    count        = "2"
+    count        = "1"
     size         = 10 # GB
 
     #image = "centos-cloud/centos-7"

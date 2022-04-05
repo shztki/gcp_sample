@@ -61,11 +61,12 @@ cd gcp_sample/
 1. 準備ができたら以下を実行します。
 
 	```
-	terraform init
+	terraform init -backend-config=backend.hcl
 	terraform plan
 	terraform apply
 	```
 
+	* `backend.hcl` を用意しない場合は、 `main.tf` の `backend "remote" {}` をコメントアウトして、コマンドも `terraform init` のみとし、ローカルでご利用ください。
 	* `terraform` ではなく、 `make` でもできるように Makefile を用意してあります。構築時に `.ssh` フォルダが作成されてその中に SSH鍵が置かれますが、それとは別に `~/.ssh/` 配下にコピーしておきたかったので、それも含めて自動化するためにこのようにしています。
 
 1. 問題無く実行できれば、us-east1 リージョンに e2-micro で Ubuntu20.04 の環境ができあがります。
