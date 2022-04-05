@@ -1,0 +1,3 @@
+.ssh
+backend.hcl
+*.terraform*
